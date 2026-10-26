@@ -36,7 +36,10 @@ void i18n
     },
     returnObjects: true,
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      // Only honor an explicit, previously chosen language. Without a stored
+      // choice we fall through to fallbackLng ('ro') instead of auto-detecting
+      // the browser language — so Romanian is the true default on first visit.
+      order: ['localStorage'],
       lookupLocalStorage: 'etd-lang',
       caches: ['localStorage'],
     },
