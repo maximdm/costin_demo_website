@@ -41,6 +41,14 @@ export function Layout() {
         <Footer />
         <CustomCursor />
         <BootOverlay />
+
+        {/* Floating "Demo" indicator — fixed bottom-right, site-wide */}
+        <span
+          aria-hidden
+          className="pointer-events-none fixed bottom-4 right-4 z-[200] rounded-full bg-destructive px-3 py-1.5 text-xs font-semibold text-white shadow-lg shadow-destructive/30"
+        >
+          {t('footer.demo')}
+        </span>
       </div>
     </MotionConfig>
   )

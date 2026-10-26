@@ -18,7 +18,7 @@ export function Hero() {
         className="logo-watermark pointer-events-none absolute left-1/2 top-1/2 h-[70vmin] w-[70vmin] max-h-[640px] max-w-[640px] -translate-x-1/2 -translate-y-1/2 opacity-[0.06] -z-10"
       />
 
-      <div className="mx-auto max-w-3xl space-y-8">
+      <div className="relative z-10 mx-auto max-w-3xl space-y-8">
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-primary">
           {t('home.hero.badge')}
         </p>
