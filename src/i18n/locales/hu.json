@@ -1,0 +1,439 @@
+{
+  "common": {
+    "brand": "Easy Tech Development",
+    "company": "Easy Tech Development SRL",
+    "skipToContent": "Ugrás a tartalomra",
+    "tagline": "Ipari alkatrészek automatizáláshoz, vezérléshez és elektronikához",
+    "language": {
+      "label": "Nyelv",
+      "ro": "Română",
+      "en": "English",
+      "hu": "Magyar"
+    },
+    "theme": {
+      "toggle": "Téma váltása",
+      "light": "Világos mód",
+      "dark": "Sötét mód"
+    },
+    "cta": {
+      "requestQuote": "Árajánlatot kérek",
+      "requestQuoteShort": "Árajánlat",
+      "exploreServices": "Szolgáltatások felfedezése",
+      "viewAll": "Összes megtekintése",
+      "learnMore": "További információ",
+      "send": "Kérés elküldése",
+      "sending": "Küldés...",
+      "backHome": "Vissza a főoldalra",
+      "contactUs": "Lépjen kapcsolatba velünk"
+    }
+  },
+  "nav": {
+    "home": "Kezdőlap",
+    "services": "Szolgáltatások",
+    "industries": "Iparágak",
+    "brands": "Márkák",
+    "shop": "Áruház",
+    "contact": "Kapcsolat",
+    "menu": "Menü",
+    "openMenu": "Menü megnyitása",
+    "closeMenu": "Menü bezárása"
+  },
+  "seo": {
+    "home": "Easy Tech Development — Ipari alkatrészek",
+    "services": "Szolgáltatások — Easy Tech Development",
+    "industries": "Kiszolgált iparágak — Easy Tech Development",
+    "brands": "Márkák — Easy Tech Development",
+    "shop": "Áruház — Easy Tech Development",
+    "contact": "Kapcsolat — Easy Tech Development"
+  },
+  "home": {
+    "hero": {
+      "badge": "Ipari alkatrész-beszállító · Bukarest",
+      "title": "Ipari alkatrészek,",
+      "highlight": "precízen szállítva",
+      "description": "Automatizálási, vezérlési és ipari elektronikai alkatrészeket biztosítunk Európa-szerte a gyártóknak — műszaki tanácsadással, személyre szabással és szállítástervezéssel.",
+      "primaryCta": "Árajánlatot kérek",
+      "secondaryCta": "Szolgáltatások felfedezése"
+    },
+    "stats": {
+      "years": { "value": "15+", "label": "Év tapasztalat" },
+      "brands": { "value": "30+", "label": "Forgalmazott márka" },
+      "components": { "value": "100+", "label": "Befejezett projektek" },
+      "response": { "value": "24h", "label": "Válaszidő" }
+    },
+    "services": {
+      "eyebrow": "Amit teszünk",
+      "title": "Három pillér, egy partner",
+      "description": "A megfelelő alkatrész megtalálásától a termelésbe történő időben történő szállításig — lefedjük a teljes ipari beszerzési láncot.",
+      "items": {
+        "procurement": {
+          "title": "Alkatrészbeszerzés",
+          "description": "Beszerazzük a szükséges alkatrészeket vezető márkáktól, versenyképes áron és egyértelmű szállítási határidőkkel.",
+          "features": [
+            "Globális beszerzés",
+            "Versenyképes árak",
+            "Alternatívák nem elérhető alkatrészekre"
+          ]
+        },
+        "customization": {
+          "title": "Személyre szabás",
+          "description": "Az alkatrészeket és megoldásokat az Ön műszaki követelményeihez igazítjuk — a konfigurációtól és összeszereléstől az egyedi megoldásokig.",
+          "features": [
+            "Egyedi konfiguráció",
+            "Összeszerelés és készletek",
+            "Testreszabott megoldások"
+          ]
+        },
+        "planning": {
+          "title": "Tervezés és készlet",
+          "description": "Úgy tervezzük a beszerzést és a szállítást, hogy a termelés soha ne álljon le.",
+          "features": [
+            "BOM tanácsadás",
+            "Készletkezelés",
+            "Ütemezett szállítások"
+          ]
+        }
+      }
+    },
+    "industries": {
+      "eyebrow": "Iparágak",
+      "title": "Megoldások minden iparágnak",
+      "description": "A legigényesebb ágazatok gyártóit szolgáljuk ki kritikus alkatrészekkel és kiszámítható határidőkkel.",
+      "cta": "Összes iparág megtekintése"
+    },
+    "brands": {
+      "eyebrow": "Márkák",
+      "title": "Globális vezetőkkel dolgozunk",
+      "description": "Vezető gyártók széles hálózata, hogy mindig legyen megfelelő alternatíva.",
+      "cta": "Összes márka megtekintése"
+    },
+    "why": {
+      "eyebrow": "Miért mi",
+      "title": "Partner, nem csak beszállító",
+      "description": "A műszaki tudást egy elkötelezett csapat agilitásával ötvözzük, hogy a termelés folyamatos maradjon.",
+      "items": {
+        "expertise": {
+          "title": "Műszaki szakértelem",
+          "description": "Mérnökök, akik az alkalmazást értik, nem csak a cikkszámot."
+        },
+        "speed": {
+          "title": "Gyors válasz",
+          "description": "Árajánlatok és alternatívák a lehető legrövidebb időn belül."
+        },
+        "reliability": {
+          "title": "Megbízhatóság",
+          "description": "Betartott határidők és átlátható kommunikáció."
+        },
+        "coverage": {
+          "title": "Széles lefedettség",
+          "description": "Ezer alkatrész és márka egy helyen."
+        }
+      }
+    },
+    "cta": {
+      "title": "Van alkatrészlistája vagy új projektje?",
+      "description": "Küldje el igényeit, és a lehető leghamarabb személyre szabott árajánlattal válaszolunk.",
+      "button": "Személyre szabott árajánlatot kérek"
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Szolgáltatások",
+      "title": "Ipari beszerzés a kéréstől a szállításig",
+      "description": "Lefedjük az alkatrészek beszerzését, személyre szabását és tervezését, hogy csapata a termelésre összpontosíthasson."
+    },
+    "items": {
+      "procurement": {
+        "title": "Alkatrészbeszerzés",
+        "description": "Beszerazzük a szükséges alkatrészeket vezető márkáktól.",
+        "longDescription": "Megkeressük az alkalmazásához megfelelő alkatrészeket, még akkor is, ha azok a szokásos forgalmazóknál nem elérhetők. Ellenőrizzük a készletet, kompatibilis alternatívákat javasolunk és kedvező feltételeket tárgyalunk.",
+        "benefits": [
+          "Globális beszerzés és készletellenőrzés",
+          "Versenyképes árak és egyértelmű árajánlatok",
+          "Alternatívák nem elérhető vagy elavult alkatrészekre"
+        ]
+      },
+      "customization": {
+        "title": "Személyre szabás",
+        "description": "Az alkatrészeket és megoldásokat az Ön műszaki követelményeihez igazítjuk.",
+        "longDescription": "Konfiguráljuk, összeszereljük és adaptáljuk az alkatrészeket az adott alkalmazáshoz. Kábelektől és készletektől a komplett megoldásokig pontosan azt szállítjuk, amire a projektjének szüksége van.",
+        "benefits": [
+          "Egyedi konfiguráció",
+          "Összeszerelt, beépítésre kész készletek",
+          "Testreszabott megoldások speciális alkalmazásokhoz"
+        ]
+      },
+      "planning": {
+        "title": "Tervezés és készlet",
+        "description": "Úgy tervezzük a beszerzést és a szállítást, hogy a termelés folyamatos legyen.",
+        "longDescription": "Elemezzük az anyagjegyzéket (BOM), és hosszú távú beszerzést tervezünk ütemezett szállításokkal és készletkezeléssel, hogy a termelés soha ne álljon le.",
+        "benefits": [
+          "Anyagjegyzék (BOM) tanácsadás",
+          "Készlet- és puffergazdálkodás",
+          "A termelési tervhez igazodó ütemezett szállítások"
+        ]
+      }
+    },
+    "process": {
+      "eyebrow": "Hogyan dolgozunk",
+      "title": "Egyszerű, kiszámítható folyamat",
+      "description": "Négy lépés a kérésétől a termelésbe szállított alkatrészekig.",
+      "steps": [
+        {
+          "title": "Az Ön kérése",
+          "description": "Elküldi nekünk az alkatrészlistát vagy a projekt specifikációit."
+        },
+        {
+          "title": "Elemzés és árajánlat",
+          "description": "Ellenőrizzük az elérhetőséget, alternatívákat keresünk és elkészítjük az árajánlatot."
+        },
+        {
+          "title": "Megerősítés",
+          "description": "Megerősítjük a határidőket, árakat és szállítási feltételeket."
+        },
+        {
+          "title": "Szállítás",
+          "description": "Időben szállítunk, a kapcsolódó dokumentációval együtt."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Készen áll a beszerzés optimalizálására?",
+      "description": "Küldje el igényeit, és elkészítjük a személyre szabott árajánlatot.",
+      "button": "Árajánlatot kérek"
+    }
+  },
+  "industries": {
+    "hero": {
+      "eyebrow": "Iparágak",
+      "title": "Alkatrészek minden iparág számára",
+      "description": "Igényes ágazatok gyártóit szolgáljuk ki az egyes alkalmazásokhoz igazított megoldásokkal."
+    },
+    "items": {
+      "automotive": {
+        "name": "Autóipar",
+        "description": "Összeszerelősorok, robotika és minőségellenőrzés az autóipar számára."
+      },
+      "energy": {
+        "name": "Energia",
+        "description": "Automatizálás az energiatermeléshez, -elosztáshoz és -tároláshoz."
+      },
+      "pharma": {
+        "name": "Gyógyszeripar és biotech",
+        "description": "Szabályozott folyamatok, nyomon követhetőség és megfelelés szabályozott környezetben."
+      },
+      "food": {
+        "name": "Élelmiszer és ital",
+        "description": "Robusztus berendezések feldolgozáshoz, csomagoláshoz és ipari higiéniához."
+      },
+      "machinery": {
+        "name": "Gépgyártás",
+        "description": "Alkatrészek OEM-ek, rendszerintegrátorok és gyártósorok számára."
+      },
+      "oilgas": {
+        "name": "Olaj és gáz",
+        "description": "Ellenálló megoldások zord környezethez és kritikus alkalmazásokhoz."
+      },
+      "logistics": {
+        "name": "Logisztika és intralogisztika",
+        "description": "Automatizálás raktárakhoz, szállítószalagokhoz és anyagmozgatáshoz."
+      },
+      "water": {
+        "name": "Víz és vízkezelés",
+        "description": "Műszerezés és vezérlés víz- és szennyvízkezeléshez."
+      }
+    },
+    "cta": {
+      "title": "Nem találja az iparágát?",
+      "description": "Mondja el, milyen alkalmazása van, és megtaláljuk a megfelelő alkatrészeket.",
+      "button": "Lépjen kapcsolatba velünk"
+    }
+  },
+  "brands": {
+    "hero": {
+      "eyebrow": "Márkák",
+      "title": "Globális vezetők egy helyen",
+      "description": "Automatizálás, érzékelők, pneumatika, elektronika és hajtások terén vezető gyártókkal dolgozunk."
+    },
+    "categories": {
+      "automation": {
+        "name": "Automatizálás és vezérlés",
+        "description": "PLC-k, HMI-k, frekvenciaváltók és vezérlőrendszerek."
+      },
+      "sensors": {
+        "name": "Érzékelők és biztonság",
+        "description": "Ipari érzékelők, kódolvasók és biztonsági alkatrészek."
+      },
+      "pneumatics": {
+        "name": "Pneumatika és működtetés",
+        "description": "Hengerek, szelepek, aktuátorok és pneumatikus automatizálási megoldások."
+      },
+      "electronics": {
+        "name": "Elektronika és tápellátás",
+        "description": "Tápegységek, csatlakozók, relék és elektromos védelem."
+      },
+      "drives": {
+        "name": "Motorok és hajtások",
+        "description": "Szervomotorok, hajtások, teljesítmény-félvezetők és robotika."
+      },
+      "connectivity": {
+        "name": "Csatlakozás és hálózat",
+        "description": "Ipari csatlakozók, kábelek, házak és hálózati alkatrészek."
+      }
+    },
+    "disclaimer": "Minden terméknév és márka a tulajdonosai tulajdona, és kizárólag azonosítás céljából kerül felhasználásra.",
+    "cta": {
+      "title": "Keres egy adott márkát?",
+      "description": "Küldje el a cikkszámot, és ellenőrizzük az elérhetőséget.",
+      "button": "Árajánlatot kérek"
+    }
+  },
+  "shop": {
+    "hero": {
+      "eyebrow": "Áruház",
+      "title": "Alkatrészkatalógus",
+      "description": "Fedezze fel ipari alkatrészkatalógusunkat. Az online rendelés hamarosan elérhető lesz.",
+      "badge": "Hamarosan"
+    },
+    "filters": {
+      "title": "Szűrők",
+      "category": "Kategória",
+      "brand": "Márka",
+      "search": "Keresés",
+      "searchPlaceholder": "Keresés név vagy cikkszám szerint...",
+      "all": "Összes",
+      "reset": "Szűrők visszaállítása",
+      "results": "{{count}} termék"
+    },
+    "product": {
+      "requestQuote": "Árajánlatot kérek",
+      "addToRequest": "Hozzáadás a kéréshez",
+      "details": "Részletek",
+      "inStock": "Raktáron",
+      "onRequest": "Rendelésre",
+      "comingSoon": "Hamarosan"
+    },
+    "empty": {
+      "title": "Nincs találat",
+      "description": "Próbálja módosítani a szűrőket, vagy keressen másra."
+    },
+    "categories": {
+      "automation": "Automatizálás",
+      "sensors": "Érzékelők",
+      "pneumatics": "Pneumatika",
+      "electronics": "Elektronika",
+      "drives": "Hajtások",
+      "connectivity": "Csatlakozás"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Kapcsolat",
+      "title": "Beszéljünk a projektjéről",
+      "description": "Küldjön személyre szabott kérést, vagy lépjen kapcsolatba velünk közvetlenül. Gyorsan válaszolunk."
+    },
+    "info": {
+      "title": "Elérhetőségek",
+      "address": {
+        "label": "Cím",
+        "value": "Feleacu utca 16., 014186, Bukarest, Románia"
+      },
+      "email": {
+        "label": "E-mail"
+      },
+      "phone": {
+        "label": "Telefon"
+      },
+      "hours": {
+        "label": "Nyitvatartás",
+        "value": "Hétfő – Péntek, 09:00 – 18:00"
+      }
+    },
+    "form": {
+      "title": "Személyre szabott kérés",
+      "description": "Töltse ki az űrlapot, és csatolja a releváns fájlokat (BOM, rajzok, specifikációk).",
+      "fields": {
+        "name": {
+          "label": "Teljes név",
+          "placeholder": "Az Ön neve"
+        },
+        "company": {
+          "label": "Cég",
+          "placeholder": "Cégnév"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "nev@ceg.hu"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+40 7xx xxx xxx"
+        },
+        "industry": {
+          "label": "Iparág",
+          "placeholder": "Válasszon iparágat"
+        },
+        "message": {
+          "label": "Üzenet",
+          "placeholder": "Írja le az alkatrészeket vagy a projektjét..."
+        },
+        "files": {
+          "label": "Mellékletek",
+          "help": "PDF, DWG, XLSX, ZIP vagy képek — max. 10 MB fájlonként.",
+          "button": "Fájlok kiválasztása",
+          "selected": "{{count}} fájl kiválasztva"
+        }
+      },
+      "submit": "Kérés elküldése",
+      "submitting": "Küldés...",
+      "success": {
+        "title": "Kérését elküldtük",
+        "description": "Köszönjük! A lehető leghamarabb válaszolunk."
+      },
+      "error": {
+        "title": "Valami hiba történt",
+        "description": "Kérjük, próbálja újra, vagy írjon nekünk e-mailben."
+      },
+      "validation": {
+        "nameRequired": "Kérjük, adja meg a nevét.",
+        "companyRequired": "Kérjük, adja meg a cégét.",
+        "emailRequired": "Kérjük, adja meg az e-mail-címét.",
+        "emailInvalid": "Az e-mail-cím nem érvényes.",
+        "messageRequired": "Kérjük, írja le a kérését.",
+        "messageMin": "Az üzenetnek legalább 10 karakter hosszúnak kell lennie.",
+        "fileSize": "Minden fájl legfeljebb 10 MB lehet."
+      },
+      "privacy": "Az űrlap elküldésével hozzájárul adatai kezeléséhez a kérése megválaszolása érdekében.",
+      "unavailable": {
+        "title": "Az űrlap nincs beállítva",
+        "description": "Adja hozzá a Web3Forms kulcsot a .env fájlhoz a küldés engedélyezéséhez."
+      }
+    }
+  },
+  "footer": {
+    "description": "Ipari alkatrész-beszállító automatizáláshoz, vezérléshez és elektronikához. Beszerzés, személyre szabás és tervezés — egyetlen partnertől.",
+    "columns": {
+      "company": "Cég",
+      "services": "Szolgáltatások",
+      "resources": "Források"
+    },
+    "links": {
+      "about": "Rólunk",
+      "services": "Szolgáltatások",
+      "industries": "Iparágak",
+      "brands": "Márkák",
+      "shop": "Áruház",
+      "contact": "Kapcsolat",
+      "requestQuote": "Árajánlatot kérek",
+      "privacy": "Adatvédelmi irányelvek",
+      "terms": "Felhasználási feltételek"
+    },
+    "copyright": "© {{year}} Easy Tech Development SRL. Minden jog fenntartva.",
+    "location": "Bukarest, Románia"
+  },
+  "notFound": {
+    "title": "Az oldal nem található",
+    "description": "Sajnáljuk, a keresett oldal nem létezik, vagy áthelyezték.",
+    "button": "Vissza a főoldalra"
+  }
+}

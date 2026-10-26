@@ -1,0 +1,439 @@
+{
+  "common": {
+    "brand": "Easy Tech Development",
+    "company": "Easy Tech Development SRL",
+    "skipToContent": "Skip to content",
+    "tagline": "Industrial components for automation, control and electronics",
+    "language": {
+      "label": "Language",
+      "ro": "Română",
+      "en": "English",
+      "hu": "Magyar"
+    },
+    "theme": {
+      "toggle": "Toggle theme",
+      "light": "Light mode",
+      "dark": "Dark mode"
+    },
+    "cta": {
+      "requestQuote": "Request a quote",
+      "requestQuoteShort": "Get a quote",
+      "exploreServices": "Explore services",
+      "viewAll": "View all",
+      "learnMore": "Learn more",
+      "send": "Send request",
+      "sending": "Sending...",
+      "backHome": "Back to home",
+      "contactUs": "Contact us"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "industries": "Industries",
+    "brands": "Brands",
+    "shop": "Shop",
+    "contact": "Contact",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "seo": {
+    "home": "Easy Tech Development — Industrial components",
+    "services": "Services — Easy Tech Development",
+    "industries": "Industries served — Easy Tech Development",
+    "brands": "Brands — Easy Tech Development",
+    "shop": "Shop — Easy Tech Development",
+    "contact": "Contact — Easy Tech Development"
+  },
+  "home": {
+    "hero": {
+      "badge": "Industrial component supplier · Bucharest",
+      "title": "Industrial components, delivered with",
+      "highlight": "precision",
+      "description": "We supply automation, control and industrial electronics components to manufacturers across Europe — with technical advice, customization and delivery planning.",
+      "primaryCta": "Request a quote",
+      "secondaryCta": "Explore services"
+    },
+    "stats": {
+      "years": { "value": "15+", "label": "Years of experience" },
+      "brands": { "value": "30+", "label": "Distributed brands" },
+      "components": { "value": "100+", "label": "Projects completed" },
+      "response": { "value": "24h", "label": "Response time" }
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Three pillars, one partner",
+      "description": "From finding the right component to delivering on time in production — we cover the entire industrial supply chain.",
+      "items": {
+        "procurement": {
+          "title": "Component procurement",
+          "description": "We source the components you need from leading brands, at competitive prices and with clear lead times.",
+          "features": [
+            "Global sourcing",
+            "Competitive pricing",
+            "Alternatives for unavailable parts"
+          ]
+        },
+        "customization": {
+          "title": "Customization",
+          "description": "We adapt components and solutions to your technical requirements — from configuration and assembly to fully custom solutions.",
+          "features": [
+            "Custom configuration",
+            "Assembly and kits",
+            "Tailored solutions"
+          ]
+        },
+        "planning": {
+          "title": "Planning and inventory",
+          "description": "We plan procurement and deliveries so your production never stops.",
+          "features": [
+            "BOM consulting",
+            "Inventory management",
+            "Scheduled deliveries"
+          ]
+        }
+      }
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Solutions for every industry",
+      "description": "We serve manufacturers in the most demanding sectors, with critical components and predictable lead times.",
+      "cta": "See all industries"
+    },
+    "brands": {
+      "eyebrow": "Brands",
+      "title": "We work with global leaders",
+      "description": "A broad network of top manufacturers, so you always have the right alternative.",
+      "cta": "See all brands"
+    },
+    "why": {
+      "eyebrow": "Why us",
+      "title": "A partner, not just a supplier",
+      "description": "We combine technical expertise with the agility of a dedicated team to keep your production running.",
+      "items": {
+        "expertise": {
+          "title": "Technical expertise",
+          "description": "Engineers who understand the application, not just the part number."
+        },
+        "speed": {
+          "title": "Fast response",
+          "description": "Quotes and alternatives in the shortest possible time."
+        },
+        "reliability": {
+          "title": "Reliability",
+          "description": "Lead times we honor and transparent communication."
+        },
+        "coverage": {
+          "title": "Wide coverage",
+          "description": "Thousands of components and brands in one place."
+        }
+      }
+    },
+    "cta": {
+      "title": "Have a component list or a new project?",
+      "description": "Send us your requirements and we'll reply with a tailored quote as soon as possible.",
+      "button": "Request a tailored quote"
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "Industrial supply, from request to delivery",
+      "description": "We cover component procurement, customization and planning so your team can focus on production."
+    },
+    "items": {
+      "procurement": {
+        "title": "Component procurement",
+        "description": "We source the components you need from leading brands.",
+        "longDescription": "We find the right components for your application, even when they are not available from regular distributors. We check stock, propose compatible alternatives and negotiate favorable terms.",
+        "benefits": [
+          "Global sourcing and stock checks",
+          "Competitive prices and clear quotes",
+          "Alternatives for unavailable or obsolete parts"
+        ]
+      },
+      "customization": {
+        "title": "Customization",
+        "description": "We adapt components and solutions to your technical requirements.",
+        "longDescription": "We configure, assemble and adapt components for your specific application. From cable assemblies and kits to complete solutions, we deliver exactly what your project needs.",
+        "benefits": [
+          "Custom configuration",
+          "Assemblies and ready-to-install kits",
+          "Tailored solutions for special applications"
+        ]
+      },
+      "planning": {
+        "title": "Planning and inventory",
+        "description": "We plan procurement and deliveries for a continuous production flow.",
+        "longDescription": "We analyze your bill of materials (BOM) and plan long-term procurement with scheduled deliveries and inventory management, so production never stops.",
+        "benefits": [
+          "Bill of materials (BOM) consulting",
+          "Inventory and buffer management",
+          "Scheduled deliveries aligned with production"
+        ]
+      }
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "A simple, predictable process",
+      "description": "Four steps, from your request to components delivered to production.",
+      "steps": [
+        {
+          "title": "Your request",
+          "description": "You send us your component list or project specifications."
+        },
+        {
+          "title": "Analysis and quote",
+          "description": "We check availability, find alternatives and prepare the quote."
+        },
+        {
+          "title": "Confirmation",
+          "description": "We confirm lead times, prices and delivery terms."
+        },
+        {
+          "title": "Delivery",
+          "description": "We deliver on time, with all the related documentation."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to optimize your procurement?",
+      "description": "Send us your requirements and we'll prepare a tailored quote.",
+      "button": "Request a quote"
+    }
+  },
+  "industries": {
+    "hero": {
+      "eyebrow": "Industries",
+      "title": "Components for every industry",
+      "description": "We serve manufacturers in demanding sectors with solutions tailored to each application."
+    },
+    "items": {
+      "automotive": {
+        "name": "Automotive",
+        "description": "Assembly lines, robotics and quality control for the automotive industry."
+      },
+      "energy": {
+        "name": "Energy",
+        "description": "Automation for energy generation, distribution and storage."
+      },
+      "pharma": {
+        "name": "Pharma & Biotech",
+        "description": "Controlled processes, traceability and compliance for regulated environments."
+      },
+      "food": {
+        "name": "Food & Beverage",
+        "description": "Robust equipment for processing, packaging and industrial hygiene."
+      },
+      "machinery": {
+        "name": "Machine building",
+        "description": "Components for OEMs, integrators and production lines."
+      },
+      "oilgas": {
+        "name": "Oil & Gas",
+        "description": "Resilient solutions for harsh environments and critical applications."
+      },
+      "logistics": {
+        "name": "Logistics & Intralogistics",
+        "description": "Automation for warehouses, conveyors and material handling."
+      },
+      "water": {
+        "name": "Water & Treatment",
+        "description": "Instrumentation and control for water and wastewater treatment."
+      }
+    },
+    "cta": {
+      "title": "Don't see your industry?",
+      "description": "Tell us about your application and we'll find the right components.",
+      "button": "Contact us"
+    }
+  },
+  "brands": {
+    "hero": {
+      "eyebrow": "Brands",
+      "title": "Global leaders, all in one place",
+      "description": "We work with top manufacturers in automation, sensors, pneumatics, electronics and drives."
+    },
+    "categories": {
+      "automation": {
+        "name": "Automation & Control",
+        "description": "PLCs, HMIs, variable frequency drives and control systems."
+      },
+      "sensors": {
+        "name": "Sensors & Safety",
+        "description": "Industrial sensors, code readers and safety components."
+      },
+      "pneumatics": {
+        "name": "Pneumatics & Actuation",
+        "description": "Cylinders, valves, actuators and pneumatic automation solutions."
+      },
+      "electronics": {
+        "name": "Electronics & Power",
+        "description": "Power supplies, connectors, relays and electrical protection."
+      },
+      "drives": {
+        "name": "Motors & Drives",
+        "description": "Servo motors, drives, power semiconductors and robotics."
+      },
+      "connectivity": {
+        "name": "Connectivity & Networking",
+        "description": "Industrial connectors, cables, enclosures and network components."
+      }
+    },
+    "disclaimer": "All product names and brands are the property of their respective owners and are used for identification purposes only.",
+    "cta": {
+      "title": "Looking for a specific brand?",
+      "description": "Send us the part number and we'll check availability.",
+      "button": "Request a quote"
+    }
+  },
+  "shop": {
+    "hero": {
+      "eyebrow": "Shop",
+      "title": "Component catalog",
+      "description": "Explore our industrial component catalog. Online orders will be available soon.",
+      "badge": "Coming soon"
+    },
+    "filters": {
+      "title": "Filters",
+      "category": "Category",
+      "brand": "Brand",
+      "search": "Search",
+      "searchPlaceholder": "Search by name or part number...",
+      "all": "All",
+      "reset": "Reset filters",
+      "results": "{{count}} products"
+    },
+    "product": {
+      "requestQuote": "Request a quote",
+      "addToRequest": "Add to request",
+      "details": "Details",
+      "inStock": "In stock",
+      "onRequest": "On request",
+      "comingSoon": "Coming soon"
+    },
+    "empty": {
+      "title": "No products found",
+      "description": "Try changing the filters or searching for something else."
+    },
+    "categories": {
+      "automation": "Automation",
+      "sensors": "Sensors",
+      "pneumatics": "Pneumatics",
+      "electronics": "Electronics",
+      "drives": "Drives",
+      "connectivity": "Connectivity"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your project",
+      "description": "Send us a tailored request or contact us directly. We'll get back to you quickly."
+    },
+    "info": {
+      "title": "Contact details",
+      "address": {
+        "label": "Address",
+        "value": "16 Feleacu St, 014186, Bucharest, Romania"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Phone"
+      },
+      "hours": {
+        "label": "Hours",
+        "value": "Monday – Friday, 09:00 – 18:00"
+      }
+    },
+    "form": {
+      "title": "Tailored request",
+      "description": "Fill in the form and attach the relevant files (BOM, drawings, specifications).",
+      "fields": {
+        "name": {
+          "label": "Full name",
+          "placeholder": "Your name"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Company name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "name@company.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+40 7xx xxx xxx"
+        },
+        "industry": {
+          "label": "Industry",
+          "placeholder": "Select an industry"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Describe the components or your project..."
+        },
+        "files": {
+          "label": "Attachments",
+          "help": "PDF, DWG, XLSX, ZIP or images — max. 10 MB per file.",
+          "button": "Choose files",
+          "selected": "{{count}} files selected"
+        }
+      },
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "success": {
+        "title": "Your request has been sent",
+        "description": "Thank you! We'll get back to you as soon as possible."
+      },
+      "error": {
+        "title": "Something went wrong",
+        "description": "Please try again or email us directly."
+      },
+      "validation": {
+        "nameRequired": "Please enter your name.",
+        "companyRequired": "Please enter your company.",
+        "emailRequired": "Please enter your email address.",
+        "emailInvalid": "The email address is not valid.",
+        "messageRequired": "Please describe your request.",
+        "messageMin": "The message must be at least 10 characters long.",
+        "fileSize": "Each file must be at most 10 MB."
+      },
+      "privacy": "By submitting the form you agree to the processing of your data in order to respond to your request.",
+      "unavailable": {
+        "title": "The form is not configured",
+        "description": "Add your Web3Forms key to the .env file to enable submissions."
+      }
+    }
+  },
+  "footer": {
+    "description": "Industrial component supplier for automation, control and electronics. Procurement, customization and planning — from a single partner.",
+    "columns": {
+      "company": "Company",
+      "services": "Services",
+      "resources": "Resources"
+    },
+    "links": {
+      "about": "About us",
+      "services": "Services",
+      "industries": "Industries",
+      "brands": "Brands",
+      "shop": "Shop",
+      "contact": "Contact",
+      "requestQuote": "Request a quote",
+      "privacy": "Privacy policy",
+      "terms": "Terms and conditions"
+    },
+    "copyright": "© {{year}} Easy Tech Development SRL. All rights reserved.",
+    "location": "Bucharest, Romania"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved.",
+    "button": "Back to home"
+  }
+}

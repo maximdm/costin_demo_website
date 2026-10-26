@@ -1,0 +1,439 @@
+{
+  "common": {
+    "brand": "Easy Tech Development",
+    "company": "Easy Tech Development SRL",
+    "skipToContent": "Sari la conținut",
+    "tagline": "Componente industriale pentru automatizare, control și electronică",
+    "language": {
+      "label": "Limbă",
+      "ro": "Română",
+      "en": "English",
+      "hu": "Magyar"
+    },
+    "theme": {
+      "toggle": "Comută tema",
+      "light": "Mod luminos",
+      "dark": "Mod întunecat"
+    },
+    "cta": {
+      "requestQuote": "Solicită o ofertă",
+      "requestQuoteShort": "Cere ofertă",
+      "exploreServices": "Descoperă serviciile",
+      "viewAll": "Vezi toate",
+      "learnMore": "Află mai mult",
+      "send": "Trimite solicitarea",
+      "sending": "Se trimite...",
+      "backHome": "Înapoi la pagina principală",
+      "contactUs": "Contactează-ne"
+    }
+  },
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "industries": "Industrii",
+    "brands": "Branduri",
+    "shop": "Magazin",
+    "contact": "Contact",
+    "menu": "Meniu",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul"
+  },
+  "seo": {
+    "home": "Easy Tech Development — Componente industriale",
+    "services": "Servicii — Easy Tech Development",
+    "industries": "Industrii deservite — Easy Tech Development",
+    "brands": "Branduri — Easy Tech Development",
+    "shop": "Magazin — Easy Tech Development",
+    "contact": "Contact — Easy Tech Development"
+  },
+  "home": {
+    "hero": {
+      "badge": "Furnizor de componente industriale · București",
+      "title": "Componente industriale, livrate cu",
+      "highlight": "precizie",
+      "description": "Aprovizionăm componente de automatizare, control și electronică industrială pentru producători din întreaga Europă — cu consultanță tehnică, personalizare și planificare a livrărilor.",
+      "primaryCta": "Solicită o ofertă",
+      "secondaryCta": "Descoperă serviciile"
+    },
+    "stats": {
+      "years": { "value": "15+", "label": "Ani de experiență" },
+      "brands": { "value": "30+", "label": "Branduri distribuite" },
+      "components": { "value": "100+", "label": "Proiecte finalizate" },
+      "response": { "value": "24h", "label": "Timp de răspuns" }
+    },
+    "services": {
+      "eyebrow": "Ce facem",
+      "title": "Trei piloni, un singur partener",
+      "description": "De la identificarea componentei potrivite până la livrarea la timp în producție — acoperim întregul lanț de aprovizionare industrială.",
+      "items": {
+        "procurement": {
+          "title": "Achiziții de componente",
+          "description": "Identificăm și aprovizionăm componentele de care ai nevoie, de la branduri de top, la prețuri competitive și cu termene clare.",
+          "features": [
+            "Sourcing global",
+            "Prețuri competitive",
+            "Alternative la piese indisponibile"
+          ]
+        },
+        "customization": {
+          "title": "Personalizare",
+          "description": "Adaptăm componente și soluții la cerințele tale tehnice — de la configurare și asamblare până la soluții personalizate.",
+          "features": [
+            "Configurare la cerere",
+            "Asamblare și kituri",
+            "Soluții personalizate"
+          ]
+        },
+        "planning": {
+          "title": "Planificare și stocuri",
+          "description": "Planificăm aprovizionarea și livrările astfel încât producția ta să nu se oprească niciodată.",
+          "features": [
+            "Consultanță BOM",
+            "Managementul stocurilor",
+            "Livrări programate"
+          ]
+        }
+      }
+    },
+    "industries": {
+      "eyebrow": "Industrii",
+      "title": "Soluții pentru fiecare industrie",
+      "description": "Deservim producători din cele mai exigente domenii, cu componente critice și termene predictibile.",
+      "cta": "Vezi toate industriile"
+    },
+    "brands": {
+      "eyebrow": "Branduri",
+      "title": "Lucrăm cu liderii globali",
+      "description": "O rețea largă de producători de top, pentru ca tu să ai întotdeauna alternativa potrivită.",
+      "cta": "Vezi toate brandurile"
+    },
+    "why": {
+      "eyebrow": "De ce noi",
+      "title": "Un partener, nu doar un furnizor",
+      "description": "Combinăm cunoașterea tehnică cu agilitatea unei echipe dedicate, ca să ții producția în mișcare.",
+      "items": {
+        "expertise": {
+          "title": "Expertiză tehnică",
+          "description": "Ingineri care înțeleg aplicația, nu doar codul produsului."
+        },
+        "speed": {
+          "title": "Răspuns rapid",
+          "description": "Oferte și alternative în cel mai scurt timp."
+        },
+        "reliability": {
+          "title": "Fiabilitate",
+          "description": "Termene respectate și comunicare transparentă."
+        },
+        "coverage": {
+          "title": "Acoperire largă",
+          "description": "Mii de componente și branduri într-un singur loc."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ai o listă de componente sau un proiect nou?",
+      "description": "Trimite-ne cerințele și îți răspundem cu o ofertă personalizată în cel mai scurt timp.",
+      "button": "Solicită o ofertă personalizată"
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Servicii",
+      "title": "Aprovizionare industrială, de la cerere la livrare",
+      "description": "Acoperim achizițiile, personalizarea și planificarea componentelor, astfel încât echipa ta să se concentreze pe producție."
+    },
+    "items": {
+      "procurement": {
+        "title": "Achiziții de componente",
+        "description": "Identificăm și aprovizionăm componentele de care ai nevoie, de la branduri de top.",
+        "longDescription": "Găsim componentele potrivite pentru aplicația ta, chiar și atunci când nu sunt disponibile la distribuitorii obișnuiți. Verificăm stocuri, propunem alternative compatibile și negociem condiții avantajoase.",
+        "benefits": [
+          "Sourcing global și verificare de stoc",
+          "Prețuri competitive și oferte clare",
+          "Alternative pentru piese indisponibile sau obsolete"
+        ]
+      },
+      "customization": {
+        "title": "Personalizare",
+        "description": "Adaptăm componente și soluții la cerințele tale tehnice.",
+        "longDescription": "Configurăm, asamblăm și adaptăm componente pentru aplicația ta specifică. De la cablaje și kituri până la soluții complete, livrăm exact ce ai nevoie pentru proiect.",
+        "benefits": [
+          "Configurare la cerere",
+          "Asamblare și kituri pregătite de montaj",
+          "Soluții personalizate pentru aplicații speciale"
+        ]
+      },
+      "planning": {
+        "title": "Planificare și stocuri",
+        "description": "Planificăm aprovizionarea și livrările pentru un flux de producție continuu.",
+        "longDescription": "Analizăm lista de materiale (BOM) și planificăm aprovizionarea pe termen lung, cu livrări programate și gestionarea stocurilor, astfel încât producția să nu se oprească niciodată.",
+        "benefits": [
+          "Consultanță pentru lista de materiale (BOM)",
+          "Managementul stocurilor și al bufferelor",
+          "Livrări programate, conform planului de producție"
+        ]
+      }
+    },
+    "process": {
+      "eyebrow": "Cum lucrăm",
+      "title": "Un proces simplu și predictibil",
+      "description": "Patru pași, de la cererea ta la componentele livrate în producție.",
+      "steps": [
+        {
+          "title": "Cererea ta",
+          "description": "Ne trimiți lista de componente sau specificațiile proiectului."
+        },
+        {
+          "title": "Analiză și ofertă",
+          "description": "Verificăm disponibilitatea, identificăm alternative și pregătim oferta."
+        },
+        {
+          "title": "Confirmare",
+          "description": "Confirmăm termenele, prețurile și condițiile de livrare."
+        },
+        {
+          "title": "Livrare",
+          "description": "Livrăm componentele la timp, cu documentația aferentă."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pregătit să optimizăm aprovizionarea ta?",
+      "description": "Trimite-ne cerințele și îți pregătim o ofertă personalizată.",
+      "button": "Solicită o ofertă"
+    }
+  },
+  "industries": {
+    "hero": {
+      "eyebrow": "Industrii",
+      "title": "Componente pentru fiecare industrie",
+      "description": "Deservim producători din domenii exigente, cu soluții adaptate fiecărei aplicații."
+    },
+    "items": {
+      "automotive": {
+        "name": "Automotive",
+        "description": "Linii de asamblare, roboți și control de calitate pentru industria auto."
+      },
+      "energy": {
+        "name": "Energie",
+        "description": "Automatizare pentru producția, distribuția și stocarea energiei."
+      },
+      "pharma": {
+        "name": "Farma & Biotech",
+        "description": "Procese controlate, trasabilitate și conformitate pentru medii reglementate."
+      },
+      "food": {
+        "name": "Alimentar & Băuturi",
+        "description": "Echipamente robuste pentru procesare, ambalare și igienă industrială."
+      },
+      "machinery": {
+        "name": "Construcții de mașini",
+        "description": "Componente pentru OEM, integratori și linii de producție."
+      },
+      "oilgas": {
+        "name": "Petrol & Gaz",
+        "description": "Soluții rezistente pentru medii dificile și aplicații critice."
+      },
+      "logistics": {
+        "name": "Logistică & Intralogistică",
+        "description": "Automatizare pentru depozite, conveioare și manipularea materialelor."
+      },
+      "water": {
+        "name": "Apă & Tratare",
+        "description": "Instrumentație și control pentru tratarea apei și a apelor uzate."
+      }
+    },
+    "cta": {
+      "title": "Nu vezi industria ta?",
+      "description": "Spune-ne ce aplicație ai și găsim componentele potrivite.",
+      "button": "Contactează-ne"
+    }
+  },
+  "brands": {
+    "hero": {
+      "eyebrow": "Branduri",
+      "title": "Lideri globali, într-un singur loc",
+      "description": "Lucrăm cu producători de top din automatizare, senzori, pneumatică, electronică și acționări."
+    },
+    "categories": {
+      "automation": {
+        "name": "Automatizare & Control",
+        "description": "PLC-uri, HMI-uri, variatoare de frecvență și sisteme de control."
+      },
+      "sensors": {
+        "name": "Senzori & Siguranță",
+        "description": "Senzori industriali, cititoare de coduri și componente de siguranță."
+      },
+      "pneumatics": {
+        "name": "Pneumatică & Acționări",
+        "description": "Cilindri, valve, actuatori și soluții de automatizare pneumatică."
+      },
+      "electronics": {
+        "name": "Electronică & Alimentare",
+        "description": "Surse de alimentare, conectori, relee și protecții electrice."
+      },
+      "drives": {
+        "name": "Motoare & Acționări",
+        "description": "Servomotoare, variatoare, semiconductori de putere și robotică."
+      },
+      "connectivity": {
+        "name": "Conectică & Rețelistică",
+        "description": "Conectori industriali, cabluri, carcase și componente de rețea."
+      }
+    },
+    "disclaimer": "Toate numele de produse și mărcile sunt proprietatea deținătorilor lor și sunt folosite doar în scop de identificare.",
+    "cta": {
+      "title": "Cauți un brand anume?",
+      "description": "Trimite-ne codul produsului și verificăm disponibilitatea.",
+      "button": "Solicită o ofertă"
+    }
+  },
+  "shop": {
+    "hero": {
+      "eyebrow": "Magazin",
+      "title": "Catalog de componente",
+      "description": "Explorăm catalogul nostru de componente industriale. Comenzile online vor fi disponibile în curând.",
+      "badge": "În curând"
+    },
+    "filters": {
+      "title": "Filtre",
+      "category": "Categorie",
+      "brand": "Brand",
+      "search": "Caută",
+      "searchPlaceholder": "Caută după nume sau cod...",
+      "all": "Toate",
+      "reset": "Resetează filtrele",
+      "results": "{{count}} produse"
+    },
+    "product": {
+      "requestQuote": "Solicită ofertă",
+      "addToRequest": "Adaugă la cerere",
+      "details": "Detalii",
+      "inStock": "În stoc",
+      "onRequest": "La cerere",
+      "comingSoon": "În curând"
+    },
+    "empty": {
+      "title": "Niciun produs găsit",
+      "description": "Încearcă să modifici filtrele sau caută altceva."
+    },
+    "categories": {
+      "automation": "Automatizare",
+      "sensors": "Senzori",
+      "pneumatics": "Pneumatică",
+      "electronics": "Electronică",
+      "drives": "Acționări",
+      "connectivity": "Conectică"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Hai să vorbim despre proiectul tău",
+      "description": "Trimite-ne o solicitare personalizată sau contactează-ne direct. Îți răspundem rapid."
+    },
+    "info": {
+      "title": "Date de contact",
+      "address": {
+        "label": "Adresă",
+        "value": "Str. Feleacu 16, 014186, București, România"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Telefon"
+      },
+      "hours": {
+        "label": "Program",
+        "value": "Luni – Vineri, 09:00 – 18:00"
+      }
+    },
+    "form": {
+      "title": "Solicitare personalizată",
+      "description": "Completează formularul și atașează fișierele relevante (BOM, desene, specificații).",
+      "fields": {
+        "name": {
+          "label": "Nume complet",
+          "placeholder": "Numele tău"
+        },
+        "company": {
+          "label": "Companie",
+          "placeholder": "Numele companiei"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "nume@companie.ro"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+40 7xx xxx xxx"
+        },
+        "industry": {
+          "label": "Industrie",
+          "placeholder": "Selectează industria"
+        },
+        "message": {
+          "label": "Mesaj",
+          "placeholder": "Descrie componentele sau proiectul tău..."
+        },
+        "files": {
+          "label": "Fișiere atașate",
+          "help": "PDF, DWG, XLSX, ZIP sau imagini — max. 10 MB per fișier.",
+          "button": "Alege fișiere",
+          "selected": "{{count}} fișiere selectate"
+        }
+      },
+      "submit": "Trimite solicitarea",
+      "submitting": "Se trimite...",
+      "success": {
+        "title": "Solicitarea a fost trimisă",
+        "description": "Mulțumim! Îți răspundem în cel mai scurt timp."
+      },
+      "error": {
+        "title": "Ceva nu a funcționat",
+        "description": "Te rugăm să încerci din nou sau să ne scrii direct pe email."
+      },
+      "validation": {
+        "nameRequired": "Te rugăm să introduci numele.",
+        "companyRequired": "Te rugăm să introduci compania.",
+        "emailRequired": "Te rugăm să introduci adresa de email.",
+        "emailInvalid": "Adresa de email nu este validă.",
+        "messageRequired": "Te rugăm să descrii cerința ta.",
+        "messageMin": "Mesajul trebuie să aibă cel puțin 10 caractere.",
+        "fileSize": "Fiecare fișier trebuie să aibă maxim 10 MB."
+      },
+      "privacy": "Prin trimiterea formularului ești de acord cu prelucrarea datelor pentru a răspunde solicitării tale.",
+      "unavailable": {
+        "title": "Formularul nu este configurat",
+        "description": "Adaugă cheia Web3Forms în fișierul .env pentru a activa trimiterea."
+      }
+    }
+  },
+  "footer": {
+    "description": "Furnizor de componente industriale pentru automatizare, control și electronică. Achiziții, personalizare și planificare — dintr-un singur partener.",
+    "columns": {
+      "company": "Companie",
+      "services": "Servicii",
+      "resources": "Resurse"
+    },
+    "links": {
+      "about": "Despre noi",
+      "services": "Servicii",
+      "industries": "Industrii",
+      "brands": "Branduri",
+      "shop": "Magazin",
+      "contact": "Contact",
+      "requestQuote": "Solicită ofertă",
+      "privacy": "Politica de confidențialitate",
+      "terms": "Termeni și condiții"
+    },
+    "copyright": "© {{year}} Easy Tech Development SRL. Toate drepturile rezervate.",
+    "location": "București, România"
+  },
+  "notFound": {
+    "title": "Pagina nu a fost găsită",
+    "description": "Ne pare rău, pagina căutată nu există sau a fost mutată.",
+    "button": "Înapoi la pagina principală"
+  }
+}
