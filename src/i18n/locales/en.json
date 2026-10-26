@@ -429,7 +429,8 @@
       "terms": "Terms and conditions"
     },
     "copyright": "© {{year}} Easy Tech Development SRL. All rights reserved.",
-    "location": "Bucharest, Romania"
+    "location": "Bucharest, Romania",
+    "demo": "Demo"
   },
   "notFound": {
     "title": "Page not found",

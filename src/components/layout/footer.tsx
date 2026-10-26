@@ -81,7 +81,13 @@ export function Footer() {
 
         <div className="border-t border-border/60">
           <div className="flex flex-col items-center justify-between gap-3 px-8 py-6 text-xs text-muted-foreground md:flex-row">
-            <p>{t('footer.copyright', { year: CURRENT_YEAR })}</p>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/50 px-2.5 py-0.5">
+                <span className="size-1.5 rounded-full bg-brand-gradient" />
+                {t('footer.demo')}
+              </span>
+              <p>{t('footer.copyright', { year: CURRENT_YEAR })}</p>
+            </div>
             <div className="flex gap-5">
               <a href="#" className="transition-colors hover:text-foreground">
                 {t('footer.links.privacy')}

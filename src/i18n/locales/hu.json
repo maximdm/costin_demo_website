@@ -429,7 +429,8 @@
       "terms": "Felhasználási feltételek"
     },
     "copyright": "© {{year}} Easy Tech Development SRL. Minden jog fenntartva.",
-    "location": "Bukarest, Románia"
+    "location": "Bukarest, Románia",
+    "demo": "Demó"
   },
   "notFound": {
     "title": "Az oldal nem található",

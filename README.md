@@ -5,6 +5,10 @@ Development SRL**, an industrial component supplier (Bucharest, Romania).
 Procurement · Customization · Planning of industrial automation / control /
 electronics components.
 
+> **Demo site** — this is a demonstration / prototype website for Easy Tech
+> Development SRL. Content, copy, and assets are illustrative; contact details
+> and the Web3Forms key are placeholders to be replaced before launch.
+
 - **Languages**: Romanian (default) · English · Hungarian — via `react-i18next`.
 - **Stack**: Vite + React 19 + TypeScript · Tailwind v4 · shadcn/ui · react-router ·
   next-themes · motion · react-hook-form + zod · Web3Forms (RFQ email) · gsap (cursor).
@@ -48,3 +52,7 @@ This is a static Vite SPA — no server needed.
 
 ## Project layout
 See `agents.md` for the full structure and contribution conventions.
+
+## Repository
+- Source: https://github.com/maximdm/costin_demo_website
+- This repository is the demo website described above.
