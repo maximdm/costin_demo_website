@@ -73,6 +73,11 @@ export function Navbar() {
           <LanguageSwitcher />
           <ThemeToggle />
 
+          <span className="hidden items-center gap-1.5 rounded-full bg-brand-gradient px-3 py-1 text-xs font-semibold text-white shadow-sm md:inline-flex">
+            <span className="size-1.5 rounded-full bg-white/80" />
+            {t('footer.demo')}
+          </span>
+
           <Magnetic className="hidden lg:inline-flex">
             <Button
               asChild
