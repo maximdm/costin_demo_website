@@ -5,24 +5,33 @@ import { cn } from '@/lib/utils'
 
 /** Elements that should make the cursor enlarge (and act as hover targets). */
 const INTERACTIVE = 'a, button, [role="button"], input, textarea, select, [data-magnetic]'
-const HOVER_SCALE = 2.6
-const LERP = 0.18
+const RING_LERP = 0.18
+const SCALE_LERP = 0.2
+// The ring's native (unscaled) size IS the hover size, so hovering renders at
+// scale 1.0 — crisp. The default trailing state is downscaled from that, which
+// stays sharp (averaging) instead of smearing like an upscale would.
+const DEFAULT_SCALE = 0.5
+const HOVER_SCALE = 1.0
 
 /**
- * Cuberto-style custom cursor: a blend-mode dot that trails the mouse,
- * stretches with velocity, and scales up over interactive elements.
+ * Premium "transparency hover" cursor:
+ *  - a precise dot locked exactly under the pointer (you are the mouse),
+ *  - a larger ring that trails the dot with velocity-based stretch,
+ *  - on interactive elements the ring expands into a transparent-centered
+ *    focus circle (mix-blend-difference inverts whatever it crosses) while the
+ *    dot fades out, so you see *through* the hover instead of a solid blob.
  *
- * Only active on devices with a fine pointer (mouse) and when the user
- * has not requested reduced motion.
+ * Only active on devices with a fine pointer (mouse) and when the user has not
+ * requested reduced motion.
  *
- * Performance: instead of `gsap.ticker` (which runs every frame forever and
- * forces the `mix-blend-difference` to re-composite against the backdrop
- * continuously — the cause of the ~32fps idle lag), we drive a self-stopping
- * rAF loop that runs only while the cursor is moving or settling, then snaps
- * to rest. When the mouse is idle, zero frames are spent re-blending.
+ * Performance: we drive a self-stopping rAF loop that runs only while the
+ * cursor is moving or settling, then snaps to rest — so when the mouse is idle,
+ * zero frames are spent re-compositing the mix-blend-difference layer (the
+ * cause of the earlier ~32fps idle cost).
  */
 export function CustomCursor() {
-  const ref = useRef<HTMLDivElement>(null)
+  const ringRef = useRef<HTMLDivElement>(null)
+  const dotRef = useRef<HTMLDivElement>(null)
   const [enabled, setEnabled] = useState(false)
 
   useEffect(() => {
@@ -30,70 +39,79 @@ export function CustomCursor() {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (!fine || reduced) return
 
-    const el = ref.current
-    if (!el) return
+    const ring = ringRef.current
+    const dot = dotRef.current
+    if (!ring || !dot) return
 
     setEnabled(true)
     document.body.classList.add('cursor-active')
 
-    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
-    const target = { x: pos.x, y: pos.y }
-    let scale = 1
-    let targetScale = 1
+    const target = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
+    const ringPos = { x: target.x, y: target.y }
+    let ringScale = DEFAULT_SCALE
+    let targetScale = DEFAULT_SCALE
+    let dotOpacity = 1
+    let targetOpacity = 1
     let hovered = false
-    const last = { x: pos.x, y: pos.y }
+    const ringLast = { x: ringPos.x, y: ringPos.y }
 
-    gsap.set(el, { xPercent: -50, yPercent: -50, x: pos.x, y: pos.y })
+    gsap.set(ring, {
+      xPercent: -50,
+      yPercent: -50,
+      x: ringPos.x,
+      y: ringPos.y,
+      scaleX: DEFAULT_SCALE,
+      scaleY: DEFAULT_SCALE,
+    })
+    gsap.set(dot, { xPercent: -50, yPercent: -50, x: target.x, y: target.y })
 
     let rafId: number | null = null
     let running = false
 
     const render = () => {
-      pos.x += (target.x - pos.x) * LERP
-      pos.y += (target.y - pos.y) * LERP
-      scale += (targetScale - scale) * LERP
+      ringPos.x += (target.x - ringPos.x) * RING_LERP
+      ringPos.y += (target.y - ringPos.y) * RING_LERP
+      ringScale += (targetScale - ringScale) * SCALE_LERP
+      dotOpacity += (targetOpacity - dotOpacity) * SCALE_LERP
 
-      const dx = pos.x - last.x
-      const dy = pos.y - last.y
+      const dx = ringPos.x - ringLast.x
+      const dy = ringPos.y - ringLast.y
       const dist = Math.hypot(dx, dy)
       const angle = (Math.atan2(dy, dx) * 180) / Math.PI
-      const stretch = Math.min(dist * 0.05, 1)
+      const stretch = Math.min(dist * 0.04, 0.6)
 
-      last.x = pos.x
-      last.y = pos.y
+      ringLast.x = ringPos.x
+      ringLast.y = ringPos.y
 
-      if (!hovered) {
-        gsap.set(el, {
-          x: pos.x,
-          y: pos.y,
-          rotate: angle,
-          scaleX: scale + stretch,
-          scaleY: scale - Math.min(stretch, 0.35),
-        })
-      } else {
-        gsap.set(el, {
-          x: pos.x,
-          y: pos.y,
-          rotate: 0,
-          scaleX: scale,
-          scaleY: scale,
-        })
-      }
+      // The dot is pinned to the exact pointer position — pinpoint precise.
+      gsap.set(dot, { x: target.x, y: target.y, opacity: dotOpacity })
+
+      // The ring trails and stretches with velocity, then eases back to a
+      // centered circle (no stretch) while hovered.
+      gsap.set(ring, {
+        x: ringPos.x,
+        y: ringPos.y,
+        rotate: hovered ? 0 : angle,
+        scaleX: ringScale + (hovered ? 0 : stretch),
+        scaleY: ringScale - (hovered ? 0 : Math.min(stretch, 0.35)),
+      })
 
       // Stop the loop once everything has settled — no point re-blending every
       // frame while the cursor is at rest.
       const settled =
-        Math.abs(target.x - pos.x) < 0.5 &&
-        Math.abs(target.y - pos.y) < 0.5 &&
-        Math.abs(targetScale - scale) < 0.01
+        Math.abs(target.x - ringPos.x) < 0.5 &&
+        Math.abs(target.y - ringPos.y) < 0.5 &&
+        Math.abs(targetScale - ringScale) < 0.01 &&
+        Math.abs(targetOpacity - dotOpacity) < 0.01
       if (settled) {
-        gsap.set(el, {
+        gsap.set(ring, {
           x: target.x,
           y: target.y,
           rotate: 0,
           scaleX: targetScale,
           scaleY: targetScale,
         })
+        gsap.set(dot, { x: target.x, y: target.y, opacity: targetOpacity })
         running = false
         rafId = null
         return
@@ -118,6 +136,7 @@ export function CustomCursor() {
       if (t) {
         hovered = true
         targetScale = HOVER_SCALE
+        targetOpacity = 0
         ensureRunning()
       }
     }
@@ -128,6 +147,7 @@ export function CustomCursor() {
       if (t && (!related || !related.closest?.(INTERACTIVE))) {
         hovered = false
         targetScale = 1
+        targetOpacity = 1
         ensureRunning()
       }
     }
@@ -146,13 +166,26 @@ export function CustomCursor() {
   }, [])
 
   return (
-    <div
-      ref={ref}
-      aria-hidden
-      className={cn(
-        'pointer-events-none fixed left-0 top-0 z-[100] h-5 w-5 rounded-full bg-white mix-blend-difference transition-opacity duration-300 will-change-transform',
-        enabled ? 'opacity-100' : 'opacity-0',
-      )}
-    />
+    <>
+      {/* Trailing ring — transparent center, inverts what it crosses. Its
+          native size is the hover size, so hovering renders at scale 1 (crisp). */}
+      <div
+        ref={ringRef}
+        aria-hidden
+        className={cn(
+          'pointer-events-none fixed left-0 top-0 z-[100] size-10 rounded-full border-[3px] border-white mix-blend-difference transition-opacity duration-300 will-change-transform',
+          enabled ? 'opacity-100' : 'opacity-0',
+        )}
+      />
+      {/* Precise dot — locked to the pointer. */}
+      <div
+        ref={dotRef}
+        aria-hidden
+        className={cn(
+          'pointer-events-none fixed left-0 top-0 z-[100] size-1 rounded-full bg-white mix-blend-difference will-change-transform',
+          enabled ? 'opacity-100' : 'opacity-0',
+        )}
+      />
+    </>
   )
 }
