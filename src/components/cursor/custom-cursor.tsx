@@ -128,38 +128,35 @@ export function CustomCursor() {
     const onMove = (e: PointerEvent) => {
       target.x = e.clientX
       target.y = e.clientY
+      // Derive hover state directly from the element under the pointer so the
+      // ring always reverts correctly (no enter/leave pairing that can desync
+      // and leave it stuck enlarged).
+      const hov = !!(e.target as HTMLElement | null)?.closest?.(INTERACTIVE)
+      if (hov !== hovered) {
+        hovered = hov
+        targetScale = hov ? HOVER_SCALE : DEFAULT_SCALE
+        targetOpacity = hov ? 0 : 1
+      }
       ensureRunning()
     }
 
-    const onOver = (e: PointerEvent) => {
-      const t = (e.target as HTMLElement | null)?.closest?.(INTERACTIVE)
-      if (t) {
-        hovered = true
-        targetScale = HOVER_SCALE
-        targetOpacity = 0
-        ensureRunning()
-      }
-    }
-
-    const onOut = (e: PointerEvent) => {
-      const t = (e.target as HTMLElement | null)?.closest?.(INTERACTIVE)
-      const related = e.relatedTarget as HTMLElement | null
-      if (t && (!related || !related.closest?.(INTERACTIVE))) {
+    // Reset if the pointer leaves the window while hovering (e.g. the cursor
+    // exits the viewport), so the ring never gets stuck enlarged.
+    const onLeaveWindow = () => {
+      if (hovered) {
         hovered = false
-        targetScale = 1
+        targetScale = DEFAULT_SCALE
         targetOpacity = 1
         ensureRunning()
       }
     }
 
     window.addEventListener('pointermove', onMove)
-    document.addEventListener('pointerover', onOver)
-    document.addEventListener('pointerout', onOut)
+    window.addEventListener('pointerleave', onLeaveWindow)
 
     return () => {
       window.removeEventListener('pointermove', onMove)
-      document.removeEventListener('pointerover', onOver)
-      document.removeEventListener('pointerout', onOut)
+      window.removeEventListener('pointerleave', onLeaveWindow)
       if (rafId !== null) cancelAnimationFrame(rafId)
       document.body.classList.remove('cursor-active')
     }
