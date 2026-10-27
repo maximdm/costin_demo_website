@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils'
 
 /** Elements that should make the cursor enlarge (and act as hover targets). */
 const INTERACTIVE = 'a, button, [role="button"], input, textarea, select, [data-magnetic]'
-const RING_LERP = 0.18
-const SCALE_LERP = 0.2
+const RING_LERP = 0.35
+const SCALE_LERP = 0.25
 // The ring's native (unscaled) size IS the hover size, so hovering renders at
 // scale 1.0 — crisp. The default trailing state is downscaled from that, which
 // stays sharp (averaging) instead of smearing like an upscale would.
@@ -170,7 +170,7 @@ export function CustomCursor() {
         ref={ringRef}
         aria-hidden
         className={cn(
-          'pointer-events-none fixed left-0 top-0 z-[100] size-10 rounded-full border-[3px] border-white mix-blend-difference transition-opacity duration-300 will-change-transform',
+          'pointer-events-none fixed left-0 top-0 z-[100] size-10 rounded-full border-[3px] border-white mix-blend-difference transition-opacity duration-300 will-change-transform transform-gpu',
           enabled ? 'opacity-100' : 'opacity-0',
         )}
       />
@@ -179,7 +179,7 @@ export function CustomCursor() {
         ref={dotRef}
         aria-hidden
         className={cn(
-          'pointer-events-none fixed left-0 top-0 z-[100] size-1 rounded-full bg-white mix-blend-difference will-change-transform',
+          'pointer-events-none fixed left-0 top-0 z-[100] size-1 rounded-full bg-white mix-blend-difference will-change-transform transform-gpu',
           enabled ? 'opacity-100' : 'opacity-0',
         )}
       />
