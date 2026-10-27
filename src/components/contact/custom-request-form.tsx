@@ -16,8 +16,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Magnetic } from '@/components/cursor/magnetic'
-
 const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
 const CONFIGURED = Boolean(ACCESS_KEY)
 const MAX_FILE_BYTES = 10 * 1024 * 1024
@@ -314,20 +312,18 @@ export function CustomRequestForm() {
           )}
         </div>
 
-        <div className="flex flex-col items-start gap-4 pt-1">
-          <Magnetic>
-            <Button
-              type="submit"
-              size="lg"
-              className="bg-brand-gradient text-white hover:opacity-90"
-              disabled={status === 'submitting' || !CONFIGURED}
-            >
-              {status === 'submitting'
-                ? t('contact.form.submitting')
-                : t('contact.form.submit')}
-              {status !== 'submitting' && <ArrowRight />}
-            </Button>
-          </Magnetic>
+        <div className="flex flex-col items-stretch gap-4 pt-1">
+          <Button
+            type="submit"
+            size="lg"
+            className="w-full bg-brand-gradient text-white shadow-[0_10px_30px_-12px_rgba(107,31,161,0.7)] hover:opacity-90"
+            disabled={status === 'submitting' || !CONFIGURED}
+          >
+            {status === 'submitting'
+              ? t('contact.form.submitting')
+              : t('contact.form.submit')}
+            {status !== 'submitting' && <ArrowRight />}
+          </Button>
           <p className="text-xs text-muted-foreground/70">
             {t('contact.form.privacy')}
           </p>

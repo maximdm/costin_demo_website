@@ -1,4 +1,4 @@
-import { useRef, type ReactNode } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
 import { gsap } from 'gsap'
 
 import { cn } from '@/lib/utils'
@@ -16,25 +16,42 @@ interface MagneticProps {
  */
 export function Magnetic({ children, className, strength = 0.35 }: MagneticProps) {
   const ref = useRef<HTMLSpanElement>(null)
+  // Reusable quickTo tweens — created once, just re-targeted on each move.
+  // (Spawning a fresh gsap.to on every pointermove was the cause of the
+  // mouse-movement lag: dozens of heavy elastic tweens per second stacked
+  // up and saturated the main thread.)
+  const xToRef = useRef<gsap.QuickToFunc | null>(null)
+  const yToRef = useRef<gsap.QuickToFunc | null>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    xToRef.current = gsap.quickTo(el, 'x', { duration: 0.6, ease: 'elastic.out(1, 0.3)' })
+    yToRef.current = gsap.quickTo(el, 'y', { duration: 0.6, ease: 'elastic.out(1, 0.3)' })
+
+    return () => {
+      xToRef.current?.(0)
+      yToRef.current?.(0)
+      xToRef.current = null
+      yToRef.current = null
+    }
+  }, [])
 
   const handleMove = (e: React.PointerEvent<HTMLSpanElement>) => {
     const el = ref.current
-    if (!el) return
+    const xTo = xToRef.current
+    const yTo = yToRef.current
+    if (!el || !xTo || !yTo) return
     const { height, width, left, top } = el.getBoundingClientRect()
     const x = e.clientX - (left + width / 2)
     const y = e.clientY - (top + height / 2)
-    gsap.to(el, {
-      x: x * strength,
-      y: y * strength,
-      duration: 0.6,
-      ease: 'elastic.out(1, 0.3)',
-    })
+    xTo(x * strength)
+    yTo(y * strength)
   }
 
   const handleLeave = () => {
-    const el = ref.current
-    if (!el) return
-    gsap.to(el, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.3)' })
+    xToRef.current?.(0)
+    yToRef.current?.(0)
   }
 
   return (

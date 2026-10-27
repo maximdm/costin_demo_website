@@ -24,7 +24,9 @@
       "send": "Trimite solicitarea",
       "sending": "Se trimite...",
       "backHome": "Înapoi la pagina principală",
-      "contactUs": "Contactează-ne"
+      "contactUs": "Contactează-ne",
+      "call": "Sună-ne",
+      "email": "Email"
     }
   },
   "nav": {

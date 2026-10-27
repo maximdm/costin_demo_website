@@ -358,3 +358,65 @@ html::-webkit-scrollbar-thumb:hover,
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--brand-blue);
 }
+
+/* ---------------------------------------------------------------------------
+   Animated mobile-menu hamburger (Menu Button 6).
+   Bars use currentColor so they follow the active theme (text-foreground).
+   `is-active` is toggled by the open state of the mobile menu.
+   --------------------------------------------------------------------------- */
+.hamburger {
+  position: relative;
+  height: 32px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  background-image: var(--brand-gradient);
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  border-radius: 9999px;
+}
+
+.hamburger span {
+  top: 50%;
+  transform: translateY(-50%);
+  transition:
+    background 0.3s ease-in-out 0.3s,
+    transform 0.3s ease-in-out 0.3s;
+}
+
+.hamburger span::before {
+  top: -8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger span::after {
+  top: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.is-active span {
+  background: transparent;
+  transform: translateY(-50%) rotate(-90deg);
+  transition:
+    background 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.hamburger.is-active span::before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out 0.5s;
+}
+
+.hamburger.is-active span::after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out 0.5s;
+}

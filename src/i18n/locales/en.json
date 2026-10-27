@@ -24,7 +24,9 @@
       "send": "Send request",
       "sending": "Sending...",
       "backHome": "Back to home",
-      "contactUs": "Contact us"
+      "contactUs": "Contact us",
+      "call": "Call",
+      "email": "Email"
     }
   },
   "nav": {

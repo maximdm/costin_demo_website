@@ -24,7 +24,9 @@
       "send": "Kérés elküldése",
       "sending": "Küldés...",
       "backHome": "Vissza a főoldalra",
-      "contactUs": "Lépjen kapcsolatba velünk"
+      "contactUs": "Lépjen kapcsolatba velünk",
+      "call": "Hívás",
+      "email": "Email"
     }
   },
   "nav": {

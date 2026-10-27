@@ -14,6 +14,12 @@ const LERP = 0.18
  *
  * Only active on devices with a fine pointer (mouse) and when the user
  * has not requested reduced motion.
+ *
+ * Performance: instead of `gsap.ticker` (which runs every frame forever and
+ * forces the `mix-blend-difference` to re-composite against the backdrop
+ * continuously — the cause of the ~32fps idle lag), we drive a self-stopping
+ * rAF loop that runs only while the cursor is moving or settling, then snaps
+ * to rest. When the mouse is idle, zero frames are spent re-blending.
  */
 export function CustomCursor() {
   const ref = useRef<HTMLDivElement>(null)
@@ -39,29 +45,10 @@ export function CustomCursor() {
 
     gsap.set(el, { xPercent: -50, yPercent: -50, x: pos.x, y: pos.y })
 
-    const onMove = (e: PointerEvent) => {
-      target.x = e.clientX
-      target.y = e.clientY
-    }
+    let rafId: number | null = null
+    let running = false
 
-    const onOver = (e: PointerEvent) => {
-      const t = (e.target as HTMLElement | null)?.closest?.(INTERACTIVE)
-      if (t) {
-        hovered = true
-        targetScale = HOVER_SCALE
-      }
-    }
-
-    const onOut = (e: PointerEvent) => {
-      const t = (e.target as HTMLElement | null)?.closest?.(INTERACTIVE)
-      const related = e.relatedTarget as HTMLElement | null
-      if (t && (!related || !related.closest?.(INTERACTIVE))) {
-        hovered = false
-        targetScale = 1
-      }
-    }
-
-    const tick = () => {
+    const render = () => {
       pos.x += (target.x - pos.x) * LERP
       pos.y += (target.y - pos.y) * LERP
       scale += (targetScale - scale) * LERP
@@ -92,18 +79,68 @@ export function CustomCursor() {
           scaleY: scale,
         })
       }
+
+      // Stop the loop once everything has settled — no point re-blending every
+      // frame while the cursor is at rest.
+      const settled =
+        Math.abs(target.x - pos.x) < 0.5 &&
+        Math.abs(target.y - pos.y) < 0.5 &&
+        Math.abs(targetScale - scale) < 0.01
+      if (settled) {
+        gsap.set(el, {
+          x: target.x,
+          y: target.y,
+          rotate: 0,
+          scaleX: targetScale,
+          scaleY: targetScale,
+        })
+        running = false
+        rafId = null
+        return
+      }
+      rafId = requestAnimationFrame(render)
+    }
+
+    const ensureRunning = () => {
+      if (running) return
+      running = true
+      rafId = requestAnimationFrame(render)
+    }
+
+    const onMove = (e: PointerEvent) => {
+      target.x = e.clientX
+      target.y = e.clientY
+      ensureRunning()
+    }
+
+    const onOver = (e: PointerEvent) => {
+      const t = (e.target as HTMLElement | null)?.closest?.(INTERACTIVE)
+      if (t) {
+        hovered = true
+        targetScale = HOVER_SCALE
+        ensureRunning()
+      }
+    }
+
+    const onOut = (e: PointerEvent) => {
+      const t = (e.target as HTMLElement | null)?.closest?.(INTERACTIVE)
+      const related = e.relatedTarget as HTMLElement | null
+      if (t && (!related || !related.closest?.(INTERACTIVE))) {
+        hovered = false
+        targetScale = 1
+        ensureRunning()
+      }
     }
 
     window.addEventListener('pointermove', onMove)
     document.addEventListener('pointerover', onOver)
     document.addEventListener('pointerout', onOut)
-    gsap.ticker.add(tick)
 
     return () => {
       window.removeEventListener('pointermove', onMove)
       document.removeEventListener('pointerover', onOver)
       document.removeEventListener('pointerout', onOut)
-      gsap.ticker.remove(tick)
+      if (rafId !== null) cancelAnimationFrame(rafId)
       document.body.classList.remove('cursor-active')
     }
   }, [])
@@ -113,7 +150,7 @@ export function CustomCursor() {
       ref={ref}
       aria-hidden
       className={cn(
-        'pointer-events-none fixed left-0 top-0 z-[100] h-5 w-5 rounded-full bg-white mix-blend-difference transition-opacity duration-300',
+        'pointer-events-none fixed left-0 top-0 z-[100] h-5 w-5 rounded-full bg-white mix-blend-difference transition-opacity duration-300 will-change-transform',
         enabled ? 'opacity-100' : 'opacity-0',
       )}
     />

@@ -1,24 +1,20 @@
-import { useState } from 'react'
-
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
-import { ArrowRight, Menu } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 import { LanguageSwitcher } from '@/components/layout/language-switcher'
 import { ThemeToggle } from '@/components/layout/theme-toggle'
+import { MobileMenu } from '@/components/layout/mobile-menu'
 import { Magnetic } from '@/components/cursor/magnetic'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
+import { navItems } from '@/components/layout/nav-items'
 
-const navItems = [
-  { to: '/', key: 'home', end: true },
-  { to: '/services', key: 'services', end: false },
-  { to: '/industries', key: 'industries', end: false },
-  { to: '/brands', key: 'brands', end: false },
-  { to: '/shop', key: 'shop', end: false },
-  { to: '/contact', key: 'contact', end: false },
-] as const
+// TODO: replace with the company's real contact details.
+const CONTACT_PHONE = '+40 21 000 0000'
+const CONTACT_EMAIL = 'contact@easytech.ro'
+const PHONE_HREF = `tel:${CONTACT_PHONE.replace(/\s+/g, '')}`
+const EMAIL_HREF = `mailto:${CONTACT_EMAIL}`
 
 function BrandLink() {
   const { t } = useTranslation()
@@ -47,7 +43,6 @@ function navLinkClass({ isActive }: { isActive: boolean }) {
 
 export function Navbar() {
   const { t } = useTranslation()
-  const [open, setOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 w-full px-4 pt-3">
@@ -55,14 +50,9 @@ export function Navbar() {
         <BrandLink />
 
         {/* Desktop nav — absolutely centered regardless of side widths */}
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 lg:flex">
           {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              end={item.end}
-              className={navLinkClass}
-            >
+            <NavLink key={item.to} to={item.to} end={item.end} className={navLinkClass}>
               {t(`nav.${item.key}`)}
             </NavLink>
           ))}
@@ -74,10 +64,7 @@ export function Navbar() {
           <ThemeToggle />
 
           <Magnetic className="hidden lg:inline-flex">
-            <Button
-              asChild
-              className="bg-brand-gradient text-white hover:opacity-90"
-            >
+            <Button asChild className="bg-brand-gradient text-white hover:opacity-90">
               <Link to="/contact">
                 {t('common.cta.requestQuote')}
                 <ArrowRight />
@@ -85,50 +72,7 @@ export function Navbar() {
             </Button>
           </Magnetic>
 
-          {/* Mobile menu */}
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="md:hidden"
-                aria-label={t('nav.openMenu')}
-              >
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" aria-describedby={undefined} className="w-72">
-              <SheetTitle className="text-lg">{t('nav.menu')}</SheetTitle>
-              <nav className="mt-6 flex flex-col gap-1">
-                {navItems.map((item) => (
-                  <SheetClose asChild key={item.to}>
-                    <NavLink
-                      to={item.to}
-                      end={item.end}
-                      className={({ isActive }) =>
-                        cn(
-                          'rounded-xl px-3 py-2.5 text-base font-medium transition-colors',
-                          isActive
-                            ? 'bg-accent text-foreground'
-                            : 'text-muted-foreground hover:bg-accent/50 hover:text-foreground',
-                        )
-                      }
-                    >
-                      {t(`nav.${item.key}`)}
-                    </NavLink>
-                  </SheetClose>
-                ))}
-              </nav>
-              <div className="mt-6">
-                <Button asChild className="w-full bg-brand-gradient text-white hover:opacity-90">
-                  <Link to="/contact" onClick={() => setOpen(false)}>
-                    {t('common.cta.requestQuote')}
-                    <ArrowRight />
-                  </Link>
-                </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <MobileMenu phoneHref={PHONE_HREF} emailHref={EMAIL_HREF} />
         </div>
       </div>
     </header>
