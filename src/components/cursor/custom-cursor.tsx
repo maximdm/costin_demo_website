@@ -18,16 +18,16 @@ const HOVER_SCALE = 1.0
  *  - a precise dot locked exactly under the pointer (you are the mouse),
  *  - a larger ring that trails the dot with velocity-based stretch,
  *  - on interactive elements the ring expands into a transparent-centered
- *    focus circle (mix-blend-difference inverts whatever it crosses) while the
- *    dot fades out, so you see *through* the hover instead of a solid blob.
+ *    focus circle while the dot fades out, so you see *through* the hover
+ *    instead of a solid blob.
  *
  * Only active on devices with a fine pointer (mouse) and when the user has not
  * requested reduced motion.
  *
  * Performance: we drive a self-stopping rAF loop that runs only while the
  * cursor is moving or settling, then snaps to rest — so when the mouse is idle,
- * zero frames are spent re-compositing the mix-blend-difference layer (the
- * cause of the earlier ~32fps idle cost).
+ * zero frames are spent re-compositing (the earlier ~32fps idle cost came from
+ * running the blend every frame).
  */
 export function CustomCursor() {
   const ringRef = useRef<HTMLDivElement>(null)
@@ -164,13 +164,13 @@ export function CustomCursor() {
 
   return (
     <>
-      {/* Trailing ring — transparent center, inverts what it crosses. Its
-          native size is the hover size, so hovering renders at scale 1 (crisp). */}
+      {/* Trailing ring — transparent center. Its native size is the hover size,
+          so hovering renders at scale 1 (crisp). */}
       <div
         ref={ringRef}
         aria-hidden
         className={cn(
-          'pointer-events-none fixed left-0 top-0 z-[100] size-10 rounded-full border-[3px] border-white mix-blend-difference transition-opacity duration-300 will-change-transform transform-gpu',
+          'pointer-events-none fixed left-0 top-0 z-[100] size-10 rounded-full ring-brand-gradient transition-opacity duration-300 will-change-transform transform-gpu drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]',
           enabled ? 'opacity-100' : 'opacity-0',
         )}
       />
@@ -179,7 +179,7 @@ export function CustomCursor() {
         ref={dotRef}
         aria-hidden
         className={cn(
-          'pointer-events-none fixed left-0 top-0 z-[100] size-1 rounded-full bg-white mix-blend-difference will-change-transform transform-gpu',
+          'pointer-events-none fixed left-0 top-0 z-[100] size-1 rounded-full bg-brand-gradient will-change-transform transform-gpu drop-shadow-[0_0_2px_rgba(0,0,0,0.45)]',
           enabled ? 'opacity-100' : 'opacity-0',
         )}
       />
